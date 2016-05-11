@@ -8,6 +8,7 @@ RUN cd /usr/share && \
     rm -f gradle-${GRAILS_VERSION}-bin.zip
 RUN ln -s /usr/share/gradle-${GRADLE_VERSION}/bin/gradle /usr/bin/
 RUN mkdir -p /app/
+RUN apk update && apk add bash
 
 WORKDIR /app/
 
