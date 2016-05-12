@@ -5,10 +5,10 @@ ENV GRADLE_VERSION 2.13
 RUN cd /usr/share && \
     wget https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip && \
     unzip gradle-${GRADLE_VERSION}-bin.zip && \
-    rm -f gradle-${GRAILS_VERSION}-bin.zip
+    rm -f gradle-${GRADLE_VERSION}-bin.zip
 RUN ln -s /usr/share/gradle-${GRADLE_VERSION}/bin/gradle /usr/bin/
 RUN mkdir -p /app/
-RUN apk update && apk add bash
+RUN apk update && apk add bash libstdc++ && rm -fr /var/cache/apk/*
 
 WORKDIR /app/
 
