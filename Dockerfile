@@ -12,4 +12,4 @@ RUN apk update && apk add bash libstdc++ && rm -fr /var/cache/apk/*
 
 WORKDIR /app/
 
-ENTRYPOINT ["gradle"]
+CMD gradle
