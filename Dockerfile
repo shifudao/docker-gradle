@@ -10,6 +10,6 @@ RUN cd /usr/share && \
 RUN ln -s /usr/share/gradle-${GRADLE_VERSION}/bin/gradle /usr/bin/
 RUN mkdir -p /app/
 
-WORKDIR /app/
+WORKDIR /usr/src/
 
 CMD ["gradle"]
